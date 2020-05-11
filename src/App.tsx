@@ -59,8 +59,7 @@ const App = () => {
     <div className="main">
       <Header />
 
-      <Grid className={classes.container}
-      >
+      <Grid className={classes.container}>
         <Container maxWidth="lg">
           <Grid className={classes.container} direction="row"
             justify="center"
@@ -89,7 +88,6 @@ const App = () => {
           </Grid>
         </Container>
       </Grid>
-      {/* </Container> */}
 
       <Container maxWidth="sm" className={classes.headingCenter}>
         <Typography variant="h5" className={classes.title}>
