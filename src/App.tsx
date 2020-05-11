@@ -87,11 +87,11 @@ const App = () => {
       </Container>
 
       <Container maxWidth="lg" className={classes.center}>
-        <Grid className={"ADS"} direction="row"
+        <Grid className={"cards-container"} direction="row"
           justify="center"
           alignItems="center"
           container
-          spacing={10}
+          spacing={5}
         >
           {[...Array(count)].map((e, index) => {
             return (
