@@ -34,6 +34,10 @@ const useStyles = makeStyles((theme: Theme) =>
     center: {
       textAlign: "center",
     },
+    headingCenter: {
+      textAlign: "center",
+      padding: "20px 0 20px 0",
+    },
     imageContainer: {
       display: "flex",
       justifyContent: "center",
@@ -54,40 +58,40 @@ const App = () => {
   return (
     <div className="main">
       <Header />
-      
+
       <Grid className={classes.container}
       >
         <Container maxWidth="lg">
-        <Grid className={classes.container} direction="row"
-        justify="center"
-        container
-        spacing={0}
-      >
-        <Grid item lg={4} md={4} sm={4} xs={12}>
-          <Typography variant="h2" className={classes.title}>
-            Make money magic.
+          <Grid className={classes.container} direction="row"
+            justify="center"
+            container
+            spacing={0}
+          >
+            <Grid item lg={4} md={4} sm={4} xs={12}>
+              <Typography variant="h2" className={classes.title}>
+                Make money magic.
           </Typography>
-          <Typography variant="h5" className={classes.title}>
-            All-in-one personal finance guidance, tracking and automation.
+              <Typography variant="h5" className={classes.title}>
+                All-in-one personal finance guidance, tracking and automation.
           </Typography>
-          <Button className={classes.contactButton} variant="contained">
-            <Typography variant="h5" className={classes.contactButtonTitle}>
-              Contact Us
+              <Button className={classes.contactButton} variant="contained">
+                <Typography variant="h5" className={classes.contactButtonTitle}>
+                  Contact Us
             </Typography>
-          </Button>
-          <Typography variant="h5" className={classes.title}>
-            All-in-one personal finance guidance, tracking and automation.
+              </Button>
+              <Typography variant="h5" className={classes.title}>
+                All-in-one personal finance guidance, tracking and automation.
           </Typography>
-        </Grid>
-        <Grid className={classes.imageContainer} item lg={4} md={4} sm={4} xs={12}>
-            <img className={classes.imgContainer} src={require("./assets/1.png")} alt="header-section" />
-        </Grid>
-        </Grid>
+            </Grid>
+            <Grid className={classes.imageContainer} item lg={4} md={4} sm={4} xs={12}>
+              <img className={classes.imgContainer} src={require("./assets/1.png")} alt="header-section" />
+            </Grid>
+          </Grid>
         </Container>
       </Grid>
       {/* </Container> */}
-      
-      <Container maxWidth="sm" className={classes.center}>
+
+      <Container maxWidth="sm" className={classes.headingCenter}>
         <Typography variant="h5" className={classes.title}>
           Make the best money decisions, and feel good while doing it.
           </Typography>
