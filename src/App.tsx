@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     imgContainer: {
       height: "400px",
-      width: "400px",
+      width: "100%",
       objectFit: "contain"
     }
   }),
@@ -54,7 +54,11 @@ const App = () => {
   return (
     <div className="main">
       <Header />
-      <Grid className={classes.container} direction="row"
+      
+      <Grid className={classes.container}
+      >
+        <Container maxWidth="lg">
+        <Grid className={classes.container} direction="row"
         justify="center"
         container
         spacing={0}
@@ -78,7 +82,10 @@ const App = () => {
         <Grid className={classes.imageContainer} item lg={4} md={4} sm={4} xs={12}>
             <img className={classes.imgContainer} src={require("./assets/1.png")} alt="header-section" />
         </Grid>
+        </Grid>
+        </Container>
       </Grid>
+      {/* </Container> */}
       
       <Container maxWidth="sm" className={classes.center}>
         <Typography variant="h5" className={classes.title}>
