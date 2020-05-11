@@ -1,6 +1,5 @@
 import React from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import './App.css';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
@@ -77,7 +76,7 @@ const App = () => {
           </Typography>
         </Grid>
         <Grid className={classes.imageContainer} item lg={4} md={4} sm={4} xs={12}>
-            <img className={classes.imgContainer} src={require("./assets/1.png")} />
+            <img className={classes.imgContainer} src={require("./assets/1.png")} alt="header-section" />
         </Grid>
       </Grid>
       

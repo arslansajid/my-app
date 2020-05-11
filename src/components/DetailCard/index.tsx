@@ -1,37 +1,16 @@
 import React from 'react';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Star from '@material-ui/icons/Star';
 import Typography from '@material-ui/core/Typography';
-
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        root: {
-            textAlign: "center"
-        },
-        title: {
-            color: '#014038',
-            fontWeight: 600,
-        },
-        description: {
-            color: '#014038',
-            fontWeight: 400,
-        },
-        starIcon: {
-            color: "#fddc65",
-            background: "#074880",
-            padding: "6px",
-            borderRadius: "50%",
-            width: "25px",
-            height: "25px",
-        }
-    }),
-);
-
+import withStyles from '@material-ui/core/styles/withStyles';
+import cardStyles from './styles';
 interface Props {
+    classes: object
 }
 
-const Card: React.FC<Props> = () => {
-    const classes = useStyles();
+const Card: React.FC<Props> = (props: any) => {
+    const {
+		classes
+	} = props;
 
     return (
         <div className={classes.root}>
@@ -49,4 +28,4 @@ const Card: React.FC<Props> = () => {
     );
 }
 
-export default Card;
+export default withStyles(cardStyles, { withTheme: true })(Card);

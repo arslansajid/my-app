@@ -1,52 +1,19 @@
 import React from 'react';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-// import MenuIcon from '@material-ui/icons/Menu';
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      flexGrow: 1,
-    },
-    appBar: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      background: "#eff5f5"
-    },
-    container : {
-      minWidth: '900px',
-    },
-    menuButton: {
-      marginRight: theme.spacing(2),
-    },
-    title: {
-      flexGrow: 1,
-      color: "#a9adae"
-    },
-    navButton: {
-      color: "#a9adae",
-      textTransform: "capitalize"
-    },
-    loginButton: {
-      color: "#8d89de",
-      fontWeight: 500,
-      textTransform: "capitalize"
-    },
-    linksContainer: {
-      flexGrow: 1,
-    }
-  }),
-);
+import withStyles from '@material-ui/core/styles/withStyles';
+import headerStyles from './styles';
 
 interface Props {
+  classes: object
 }
 
-const Header: React.FC<Props> = () => {
-  const classes = useStyles();
+const Header: React.FC<Props> = (props: any) => {
+  const {
+		classes
+	} = props;
 
   return (
     <div className={classes.root}>
@@ -68,4 +35,4 @@ const Header: React.FC<Props> = () => {
   );
 }
 
-export default Header;
+export default withStyles(headerStyles, { withTheme: true })(Header);
